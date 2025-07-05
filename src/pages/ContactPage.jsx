@@ -4,6 +4,7 @@ import { useState } from "react"
 import { MapPin, Mail, Phone, MessageSquare, Headphones, Users } from "lucide-react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import cardLogo from "../assets/card-image.jpg"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -151,7 +152,7 @@ export default function ContactPage() {
                 {/* Studio Image Placeholder */}
                 <div className="bg-gray-700 rounded-lg h-48 flex items-center justify-center mb-6">
                   <img
-                    src="/placeholder.svg?height=200&width=400"
+                    src={cardLogo}
                     alt="Sound Studio Interior"
                     className="w-full h-full object-cover rounded-lg"
                   />
