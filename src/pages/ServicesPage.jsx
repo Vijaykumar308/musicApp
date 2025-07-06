@@ -179,12 +179,14 @@ export default function ServicesPage() {
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <ul className="space-y-2">
+                  <div className="grid grid-cols-2 space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                       <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}
+                  </div>
                 </ul>
               </div>
             ))}

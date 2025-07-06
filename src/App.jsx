@@ -5,6 +5,7 @@ import ServicesPage from "./pages/ServicesPage"
 import ContactPage from "./pages/ContactPage"
 import AdminDashboard from "./pages/AdminDashboard"
 import UploadPage from "./pages/UploadPage"
+import TuneUploadPage from "./pages/TuneUploadPage"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/upload" element={<UploadPage />} />
+          <Route path="admin/tunelUploadPage" element={<TuneUploadPage />} />
         </Routes>
       </div>
     </Router>
