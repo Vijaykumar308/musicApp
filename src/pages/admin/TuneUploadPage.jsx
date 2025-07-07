@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Upload, ImageIcon } from "lucide-react"
 import Header from "../../components/admin/Header"
 import Sidebar from "../../components/admin/Sidebar"
+import AdminLayout from "../../components/admin/AdminLayout"
 
 export default function TuneUploadPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -36,13 +37,8 @@ export default function TuneUploadPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      <Header onMobileMenuToggle={toggleMobileMenu} isMobileMenuOpen={isMobileMenuOpen} />
-
-      <div className="flex">
-        <Sidebar isMobileOpen={isMobileMenuOpen} onMobileClose={closeMobileMenu} />
-
-        {/* Main Content */}
+   <AdminLayout>
+     {/* Main Content */}
         <div className="flex-1 ml-0 md:ml-64 transition-all duration-300 pt-[50px]">
           <div className="p-4 md:p-6 lg:p-8">
             <div className="bg-black/30 backdrop-blur-md rounded-2xl border border-white/10 p-4 md:p-8 shadow-2xl">
@@ -181,7 +177,6 @@ export default function TuneUploadPage() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+   </AdminLayout>
   )
 }

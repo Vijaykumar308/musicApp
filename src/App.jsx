@@ -6,6 +6,7 @@ import ContactPage from "./pages/ContactPage"
 import AdminDashboard from "./pages/AdminDashboard"
 import UploadPage from "./pages/UploadPage"
 import TuneUploadPage from "./pages/admin/TuneUploadPage"
+import Dashboard from "./pages/admin/Dashboard"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/upload" element={<UploadPage />} />
           <Route path="admin/tunelUploadPage" element={<TuneUploadPage />} />
+          <Route path="admin/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </Router>

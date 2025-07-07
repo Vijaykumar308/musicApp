@@ -4,12 +4,12 @@ import { ChevronLeft, Home, Upload, Music, Users, Folder, FileText, Settings } f
 import { useState, useEffect } from "react"
 
 const navigationItems = [
-  { title: "Dashboard", icon: Home, active: false, href: "/dashboard" },
-  { title: "Upload Project", icon: Upload, active: true, href: "/upload" },
+  { title: "Dashboard", icon: Home, active: false, href: "admin/dashboard" },
+  { title: "Clients", icon: Users, active: false, href: "/artists" },
   { title: "Music Library", icon: Music, active: false, href: "/library" },
-  { title: "Artists", icon: Users, active: false, href: "/artists" },
-  { title: "Genres", icon: Folder, active: false, href: "/genres" },
-  { title: "Reports", icon: FileText, active: false, href: "/reports" },
+  { title: "Upload Project", icon: Upload, active: true, href: "/upload" },
+  // { title: "Genres", icon: Folder, active: false, href: "/genres" },
+  // { title: "Reports", icon: FileText, active: false, href: "/reports" },
   { title: "Settings", icon: Settings, active: false, href: "/settings" },
 ]
 
