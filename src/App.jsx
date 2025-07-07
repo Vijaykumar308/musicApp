@@ -5,7 +5,7 @@ import ServicesPage from "./pages/ServicesPage"
 import ContactPage from "./pages/ContactPage"
 import AdminDashboard from "./pages/AdminDashboard"
 import UploadPage from "./pages/UploadPage"
-import TuneUploadPage from "./pages/TuneUploadPage"
+import TuneUploadPage from "./pages/admin/TuneUploadPage"
 
 function App() {
   return (
