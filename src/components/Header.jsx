@@ -48,7 +48,7 @@ export default function Header() {
               Contact
             </Link>
             <Link
-              to="/admin"
+              to="/admin/dashboard"
               className={`hover:text-blue-300 transition-colors ${
                 isActive("/admin") ? "text-blue-400" : "text-blue-400"
               }`}
