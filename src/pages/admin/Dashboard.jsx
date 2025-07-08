@@ -11,7 +11,7 @@ const Dashboard  = () => {
             </div>
         </div>
     </AdminLayout>
-    </>
+    </> 
 }
 
 export default Dashboard;

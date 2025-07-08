@@ -1,7 +1,25 @@
 "use client"
-import { Search, Bell, User, Menu, X } from "lucide-react"
+import { Search, Bell, User, Menu, X, Undo2 } from "lucide-react"
+import { useEffect, useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
+
 
 export default function Header({ onMobileMenuToggle, isMobileMenuOpen }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <header className="fixed top-0 left-0 right-0 h-[50px] bg-black/20 backdrop-blur-md border-b border-white/10 z-20">
       <div className="flex items-center justify-between h-full px-4">
@@ -50,10 +68,39 @@ export default function Header({ onMobileMenuToggle, isMobileMenuOpen }) {
             <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
           </button> */}
 
+          <NavLink to={"/"} title="back to site">
+            <Undo2 />
+          </NavLink>
+
           {/* Profile */}
-          <button className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all">
-            <p className="bg-amber-500 p-1.5 text-black border rounded">VK</p>
-          </button>
+          <div className="relative inline-block text-left" ref={dropdownRef}>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 text-white hover:text-purple-200 hover:cursor-pointer rounded-lg transition-all"
+            >
+              <p className="bg-gradient-to-r from-purple-600 to-blue-500 p-1.5 text-white font-semibold border border-purple-300 rounded">
+                VK
+              </p>
+            </button>
+
+            {isOpen && (
+              <div className="absolute right-0 mt-2 w-40 bg-gradient-to-br from-purple-700 to-blue-600 rounded-md shadow-xl z-10">
+                <ul className="py-1 text-sm text-white">
+                  <li>
+                    <button className="block w-full text-left px-4 py-2 hover:bg-purple-800 hover:backdrop-blur">
+                      Profile
+                    </button>
+                  </li>
+                  <li>
+                    <button className="block w-full text-left px-4 py-2 hover:bg-purple-800 hover:backdrop-blur">
+                      Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
         </div>
       </div>
     </header>
