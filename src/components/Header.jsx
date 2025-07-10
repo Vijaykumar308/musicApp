@@ -59,9 +59,9 @@ export default function Header() {
 
           {/* User Profile */}
           <div className="hidden md:flex items-center">
-            <Link to="/admin/tunelUploadPage" className="mr-4">
+            <Link to="/admin/dashboard" className="mr-4">
               <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors">
-                Upload
+                admin
               </button>
             </Link>
             <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
