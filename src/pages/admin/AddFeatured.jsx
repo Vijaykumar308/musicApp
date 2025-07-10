@@ -35,9 +35,9 @@ const AddFeaturedProject = () => {
   const labelClass = "block mb-1 font-medium";
 
   return (
-    <div className="p-6">
-      <div className="bg-gradient-to-br from-purple-900 to-indigo-900 text-white shadow-2xl rounded-2xl">
-        <div className="p-6">
+    <div className="py-6">
+      <div className="py-6">
+        <div className="py-6">
           <h2 className="text-2xl font-bold mb-6">Add Featured Music Project</h2>
           <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
 

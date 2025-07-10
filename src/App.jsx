@@ -10,6 +10,7 @@ import AdminLayout from "./components/admin/AdminLayout";
 import Dashboard from "./pages/admin/Dashboard";
 import TuneUploadPage from "./pages/admin/TuneUploadPage";
 import AddFeaturedProject from "./pages/admin/AddFeatured";
+import PageNotFound from "./components/PageNotFound";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
     element: <UploadPage />,
   },
   {
+    path: "/*",
+    element: <PageNotFound />,
+  },
+  {
     path: "/admin",
     element: <AdminLayout />,
     children: [
@@ -45,7 +50,7 @@ const router = createBrowserRouter([
         element: <Dashboard />
       },
       {
-        path: "tune-upload",
+        path: "tunelUploadPage",
         element: <TuneUploadPage />
       },
       {
